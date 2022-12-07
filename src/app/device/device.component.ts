@@ -11,6 +11,6 @@ export class DeviceComponent {
   constructor(private router: Router) {}
 
   goBack() {
-    this.router
+    this.router.url
   }
 }
