@@ -11,6 +11,6 @@ export class DeviceComponent {
   constructor(private router: Router) {}
 
   goBack() {
-    this.router.url
+    this.router.navigateByUrl('/home');
   }
 }
