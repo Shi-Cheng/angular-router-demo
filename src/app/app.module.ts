@@ -8,6 +8,7 @@ import { DeviceComponent } from './device/device.component';
 import { UserComponent } from './user/user.component';
 import { NotFoundComponent } from './error/error.component';
 import { routers } from './app.routers';
+import { DetailComponent } from './device/detail/detail.component'
 
 @NgModule({
   declarations: [
@@ -15,7 +16,8 @@ import { routers } from './app.routers';
     HomeComponent,
     DeviceComponent,
     UserComponent,
-    NotFoundComponent
+    NotFoundComponent,
+    DetailComponent
   ],
   imports: [
     BrowserModule,

@@ -6,6 +6,7 @@ import { ListComponent } from './device/list/list.component';
 import { DetailComponent } from './device/detail/detail.component';
 import { AddComponent } from './device/add/add.component';
 import { Route } from '@angular/router';
+import { DeviceModule } from './device/device.module';
 
 const routers: Route[] = [
   {
@@ -19,26 +20,7 @@ const routers: Route[] = [
   },
   {
     path: 'device',
-    component: DeviceComponent,
-    children: [
-      {
-        path: '',
-        redirectTo: 'list',
-        pathMatch: 'full'
-      },
-      {
-        path: 'list',
-        component: ListComponent
-      },
-      {
-        path: 'detail',
-        component: DetailComponent
-      },
-      {
-        path: 'add',
-        component: AddComponent
-      }
-    ]
+    loadChildren: () => import('./device/device.module').then(m => m.DeviceModule)
   },
   {
     path: 'user',
