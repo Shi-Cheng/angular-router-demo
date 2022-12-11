@@ -1,8 +1,8 @@
 import { Route } from "@angular/router";
 import { DetailComponent } from "./detail/detail.component";
-import {NotFoundComponent} from '../error/error.component'
+import { AddDeviceComponent } from "./add/add.component";
+import {NotFoundComponent} from '../error/error.component';
 import { ListComponent } from "./list/list.component";
-
 const routers: Route[] = [
   {
     path: '',
@@ -14,11 +14,11 @@ const routers: Route[] = [
     component: ListComponent
   },
   {
-    path: ':id',
-    component: DetailComponent
+    path: 'add',
+    component: AddDeviceComponent
   },
   {
-    path: 'add',
+    path: ':id',
     component: DetailComponent
   },
   {

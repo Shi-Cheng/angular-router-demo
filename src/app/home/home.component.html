@@ -12,3 +12,9 @@
 <a routerLink="/device/1">设备1</a>
 <br>
 <a routerLink="/device/2">设备2</a>
+
+<div *ngIf="student && student.length >0;else empty"></div>
+<ng-template #empty>
+    Home, empty data
+</ng-template>
+

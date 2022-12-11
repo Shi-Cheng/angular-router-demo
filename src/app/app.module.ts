@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
+import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
 import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
@@ -22,6 +23,7 @@ import { DetailComponent } from './device/detail/detail.component'
   imports: [
     BrowserModule,
     FormsModule,
+    CommonModule,
     RouterModule.forRoot(routers)
   ],
   providers: [],

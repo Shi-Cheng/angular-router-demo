@@ -1,1 +1,11 @@
 <p>list works!</p>
+<div *ngIf="deviceList.length > 0; else emptyData">
+  <div *ngFor="let item of deviceList; index as i">
+    <li>{{item}}</li>
+  </div>
+</div>
+<ng-template #emptyData>
+  <span>empty data</span>
+</ng-template>
+<button (click)="goBack()">返回</button>
+<button (click)="addDevice()">新增</button>
